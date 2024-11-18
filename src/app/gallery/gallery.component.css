@@ -1,0 +1,18 @@
+.gallery-image {
+    width: 100%;   /* Asegura que las imágenes tengan un 100% del ancho del contenedor */
+    height: auto;  /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Esto asegura que las imágenes no se distorsionen */
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem; /* Define un tamaño específico para la tarjeta (puedes ajustar esto) */
+    height: 40rem; /* También puedes ajustar la altura según lo desees */
+    margin-bottom: 10px; /* Espaciado entre las tarjetas */
+  }
+  
+  .card-img-top {
+    width: 100%;  /* Asegura que la imagen dentro de la tarjeta ocupe todo el ancho */
+    height: 350px;  /* Limita la altura de la imagen para que no sea demasiado grande */
+    object-fit: cover; /* Mantiene el aspecto de la imagen sin distorsión */
+  } 

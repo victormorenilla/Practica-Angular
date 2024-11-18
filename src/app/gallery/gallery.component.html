@@ -1,0 +1,25 @@
+<h2>Gallery</h2>
+<div class="card-deck">
+  <div class="card" *ngFor="let c of cities">
+    <img [src]="c.image" class="card-img-top" alt="City Image">
+    <div class="card-body">
+      <h5 class="card-title">{{ c.name }}</h5>
+      <p class="card-text">{{ c.description }}</p>
+      <div *ngIf="c.name=='Madrid'">
+      <p>La temperatura en {{c.name}} es de <strong>{{weatherData[0].main.temp}} ºC</strong></p>
+      <p>Coordenadas de {{c.name}} son <strong>Longuitud:{{weatherData[0].coord.lon}}, Latitud:{{this.weatherData[0].coord.lat}}</strong></p>
+      <p>Velocidad del viento en {{c.name}} es de <strong>{{weatherData[0].wind.speed}} m/s</strong></p>
+      </div>
+      <div *ngIf="c.name=='Paris'">
+        <p>La temperatura en {{c.name}} es de <strong>{{weatherData[1].main.temp}} ºC</strong></p>
+        <p>Coordenadas de {{c.name}} son <strong>Longuitud:{{weatherData[1].coord.lon}}, Latitud:{{this.weatherData[1].coord.lat}}</strong></p>
+        <p>Velocidad del viento en {{c.name}} es de <strong>{{weatherData[1].wind.speed}} m/s</strong></p>
+      </div>
+      <div *ngIf="c.name=='New York'">
+        <p>La temperatura en {{c.name}} es de <strong>{{weatherData[2].main.temp}} ºC</strong></p>
+        <p>Coordenadas de {{c.name}} son <strong>Longuitud:{{weatherData[2].coord.lon}}, Latitud:{{this.weatherData[2].coord.lat}}</strong></p>
+        <p>Velocidad del viento en {{c.name}} es de <strong>{{weatherData[2].wind.speed}} m/s</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
